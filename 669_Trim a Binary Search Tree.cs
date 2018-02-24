@@ -13,6 +13,14 @@ public class Solution {
             return null;
         }
         
+        if( root.val == L ){
+            root.left = null;
+        }
+        
+        if( root.val == R ){
+            root.right = null;
+        }
+        
         if( root.val < L ){
             return TrimBST( root.right, L, R );
         }
